@@ -84,9 +84,9 @@ class SiteController extends Controller
 		
 		$model=new Users;
 		
-		$schools=(new School)->getAllSchools();
+		$schools=School::model()->findAll();
 		
-		$cities=(new City)->getAllCities();
+		$cities=City::model()->findAll();
 		
 		
 		
@@ -165,7 +165,6 @@ class SiteController extends Controller
 			}
 	
 	    }
-		
 		
 	    $this->render('login',array('model'=>$model,'modelLogin'=>$modelLogin,"info"=>$info,"schools"=>$schools,"cities"=>$cities));
 	}

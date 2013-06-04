@@ -2522,3 +2522,30 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/index.php?r=users/login
 ---
+2013/06/04 11:43:27 [error] [php] PDO::__construct(): [2002] No such file or directory (trying to connect via unix:///var/mysql/mysql.sock) (/Library/WebServer/Documents/yii/framework/db/CDbConnection.php:423)
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive()
+#2 /Library/WebServer/Documents/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(438): CWebApplication->getComponent()
+#4 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(623): CWebApplication->getDb()
+#5 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(2309): Users->getDbConnection()
+#6 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 /Library/WebServer/Documents/yii/framework/web/CActiveDataProvider.php(74): model()
+#8 /Library/WebServer/Documents/popYiiJuve/protected/controllers/UsersController.php(125): CActiveDataProvider->__construct()
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(133): UsersController->runAction()
+#12 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#15 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /Library/WebServer/Documents/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Library/WebServer/Documents/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#18 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#19 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /Library/WebServer/Documents/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /Library/WebServer/Documents/popYiiJuve/index.php(13): CWebApplication->run()
+REQUEST_URI=/popYiiJuve/
+in /Library/WebServer/Documents/popYiiJuve/protected/controllers/UsersController.php (125)
+in /Library/WebServer/Documents/popYiiJuve/index.php (13)
