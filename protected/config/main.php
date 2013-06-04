@@ -13,7 +13,7 @@ return array(
 	'name'=>'POP',
 
 	//change de default controllet 
-	'defaultController' => 'users ', 
+	'defaultController' => 'users', 
     
 	// preloading 'log' component
 	'preload'=>array('log'),
